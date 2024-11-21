@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers at Our Software Company</title>
+  <link rel="stylesheet" href="career.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Join Our Team</h1>
+      <p>Explore exciting career opportunities and be part of our growing software company.</p>
+      <button onclick="scrollToJobs()">See Open Positions</button>
+    </div>
+  </header>
+
+  <!-- Job Listings Section -->
+  <section id="job-listings" class="job-listings">
+    <h2>Current Job Openings</h2>
+    <div id="jobs-container" class="jobs-container"></div>
+  </section>
+
+  <!-- Job Application Form (Modal) -->
+  <div id="apply-form-modal" class="apply-form-modal">
+    <div class="apply-form-content">
+      <h2>Apply for <span id="job-title"></span></h2>
+      <form id="applicationForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="resume" placeholder="Resume Link (e.g., LinkedIn or GitHub)" required>
+        <input type="text" id="status" value="InProgress" required style="display: none;">
+        <input type="text" id="message"  placeholder="Enter Skill">
+        <button type="submit">Submit Application</button>
+      </form>
+      <button id="close-form" class="close-btn">Close</button>
+    </div>
+  </div>
+<!-- Application Status -->
+<div class="viewStatusBtn">
+  <button id="viewStatusBtn">Application Status</button>
+      
+  <div class="status-email" id="status-email">
+    <form id="statusForm" class="statusForm" style="display: none;">
+       <input type="email" id="userEmail" placeholder="Enter Your Email" required>
+       <button type="submit" id="status-btn">&#x2705; Check Status</button>
+    </form>
+    <div id="responseMessage" style="display: none; color: #0c3b1a; font-weight: bold;">	</div>
+  </div> 
+
+  <div id="applicationDetails" class="details-table" style="display: none;">
+ 
+    <table>
+       <thead>
+        <tr>
+     
+            <th>Name</th>
+            <th>Email</th>
+            <th>Resume</th>
+            <th>Message</th>
+           
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+       </thead>
+       <tbody id="applicationData"></tbody>
+    </table>
+
+    <div id="responseMessage" style="display: block; color: green; font-weight: bold;"> </div>
+
+  </div>
+</div>
+
+
+
+  </div>
+  <footer>
+    <div class="footer-content">
+      <h2>Company Careers</h2> <!-- Title for the footer -->
+      <p>&copy; 2024 BIT. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="career.js" defer></script>
+  <script src=""></script>
+</body>
+</html>

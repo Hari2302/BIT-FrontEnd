@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    background-image: url("https://t4.ftcdn.net/jpg/10/03/66/03/240_F_1003660395_TYiiiahjSBS4Dj4YPd5EGxCFvbPlUWg8.jpg");
+    background-repeat: no-repeat;
+    background-size: cOVER;
+    font-family: "Faculty Glyphic", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+}
+
+/* Hero Section for BIT */
+.hero-section-bit {
+    /* background-image: linear-gradient(to right, #0a74da, #54a0ff); */
+    color: #052215;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.event-info-bit h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.event-info-bit p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.event-date-bit {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.learn-more-bit {
+    color: #052215;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #052215;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.learn-more-bit:hover {
+   
+    color: #17be73;
+}
+
+/* Events Section for BIT */
+.events-section-bit {
+    padding: 40px;
+    color: #052215;
+    /* background-color: #f8f9fa; */
+}
+
+.events-dropdown select {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.events-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event-card-bit {
+    /* background-color: #fff; */
+    padding: 20px;
+    border: 1px solid #052215;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card-bit h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #052215;
+}
+
+.event-card-bit p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.event-detail-bit {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.details-link-bit {
+    color: #052215;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.details-link-bit:hover {
+    text-decoration: underline;
+}

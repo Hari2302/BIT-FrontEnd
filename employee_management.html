@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/emp.css">
+    <link rel="stylesheet" href="/cart.css">
+    <link rel="stylesheet" href="das.css">
+</head>
+
+<body>
+   <div class="emp">
+       <img class="logo" src="/assest/istockphoto-1084494738-170667a_preview_rev_1.png" alt="">
+       <div id="employee-container">
+           <h2 class="title">Employee Management System</h2>
+           
+           <!-- Employee Logo to Open the Slide Panel -->
+           <img src="/assest/add-emp.png" id="empLogo" alt="Employee Logo" class="logo-icon">
+            <!-- Dashboard Logo (Daslogo) -->
+            
+
+           <!-- Sliding Panel (Hidden by Default) -->
+           <div class="cart" id="empPanel">
+               <img src="/assest/emp-3d.png" alt="Employee 3D" id="emp-3d">
+
+                
+                   
+               
+               
+               <div class="cart-content">
+                   <div class="panel-box" id="intern"  style="display: block;">
+                       <span>Intern</span>
+                   </div>
+
+                   <!-- Form Section (Initially Hidden) -->
+                   <div id="internFormContainer" class="form-container" style="display: none;">
+                       <h3>Intern Registration Form</h3>
+                       <form id="internForm">
+                           <div class="form-group">
+                               <label for="name">Name:</label>
+                               <input type="text" id="intern-name" placeholder="Enter   name" required>
+                           </div>
+                           <div class="form-group">
+                               <label for="email">Email:</label>
+                               <input type="email" id="intern-email" placeholder="Enter  email" required>
+                           </div>
+                           <div class="form-group">
+                               <label for="phone">Phone:</label>
+                               <input type="tel" id="intern-phone" placeholder="Enter  phone number" required>
+                           </div>
+                           <div class="form-group">
+                               <label for="role">Role:</label>
+                               <input type="text" id="intern-role">
+                           </div>
+                           <button type="submit" id="submitForm">Submit</button>
+                       </form>
+                   </div>
+
+                       <!-- Fresher Option and Form -->
+                       <div class="panel-box" id="fresher" style="display: block;" >
+                        <span>Fresher</span>
+                    </div>
+                    <div id="fresherFormContainer" class="form-container" style="display: none;">
+                        <h3>Fresher Registration Form</h3>
+                        <form id="fresherForm">
+                            <div class="form-group">
+                                <label>Name:</label>
+                                <input type="text" id="fresher-name" placeholder="Enter  name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" id="freshe-email" placeholder="Enter  email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone:</label>
+                                <input type="tel" id="fresher-phone" placeholder="Enter  phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Role:</label>
+                                <input type="text" id="fresher-role" value="Fresher" placeholder="Enter  Role">
+                            </div>
+                            <div class="form-group">
+                                <label>Salary:</label>
+                                <input type="number" id="fresher-salary" placeholder="Enter  salary" required>
+                            </div>
+                            <button type="submit" id="submitForm">Submit</button>
+                        </form>
+                    </div>
+ 
+                    <!-- Experience Option and Form -->
+                    <div class="panel-box" id="experience"  style="display: block;">
+                        <span>Experience</span>
+                    </div>
+                    <div id="experienceFormContainer" class="form-container" style="display: none;">
+                        <h3>Experience Registration Form</h3>
+                        <form id="experienceForm">
+                            <div class="form-group">
+                                <label>Name:</label>
+                                <input type="text" id="exp-name" placeholder="Enter  Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" id="exp-email" placeholder="Enter  Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone:</label>
+                                <input type="tel" id="exp-phone" placeholder="Enter  Phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Role:</label>
+                                <input type="text" id="exp-role" value="Exp" placeholder="Enter  Role">
+                            </div>
+                            <div class="form-group">
+                                <label>Salary:</label>
+                                <input type="number" id="exp-salary" placeholder="Enter  Current salary" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Years of Experience:</label>
+                                <input type="number" id="exp-year" placeholder="Enter  Yr of Exp" required>
+                            </div>
+                            <button type="submit" id="submitForm">Submit</button>
+                        </form>
+                    </div>
+               </div>
+               <!-- Close Button -->
+               <img src="/assest/cancel.png" alt="Close" id="cancel" class="close-icon">
+           </div>
+
+                               <!-- DASBOARD-------------------- -->
+
+           <img src="/assest/dasboard.png" alt="Dashboard" id="daslogo">
+
+
+      <div class="cart empPanel1" id="empPanel1">
+    <h1>Admin Dashboard</h1>
+    
+    <div id="separator-line"></div>
+    <div class="cart-content1">
+        <!-- Sidebar Navigation for Different Sections -->
+        <div class="sidebar1">
+            <div class="panel-box1" id="internTile">Intern</div>
+            <div class="panel-box1" id="fresherTile">Fresher</div>
+            <div class="panel-box1" id="experienceTile1">Experience</div>
+            <div class="panel-box1" id="applicationTile">Application Employee</div>
+        
+        </div>
+        
+     
+
+
+
+        <!-- Main Content Area to Display Tables -->
+        <div class="main-content1">
+            <div id="responseMessage" style="display: none; color: #0c3b1a; font-weight: bold;">	</div>
+            <div id="internDetails" class="details-table" style="display: none;">
+                <h3>Intern Details</h3>
+                <table>
+                 <thead>
+                    <tr>
+                         <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                 </thead>
+                    <!-- Intern data will be populated here -->
+                    <tbody id="internData">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="fresherDetails" class="details-table" style="display: none;">
+                <h3>Fresher Details</h3>
+                <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Role</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                    <tbody id="fresherData"></tbody>
+                </table>
+            </div>
+
+            <div id="experienceDetails" class="details-table" style="display: none;">
+                <h3>Experience Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Role</th>
+                            <th>Salary</th>
+                            <th>Years of Experience</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="experienceData"></tbody>
+                </table>
+            </div>
+
+            <div id="applicationDetails" class="details-table" style="display: none;">
+                <h3>Applied Employee</h3>
+                <table>
+                   <thead>
+                    <tr>
+           
+                        <th> Name</th>
+                        <th>Email</th>
+                        <th>Resume</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                 
+                    </tr>
+                   </thead>
+                    <tbody id="applicationData"></tbody>
+                </table>
+            </div>
+                   
+            
+        </div>
+        
+        <div  id="update-form" style="display: block;">
+                 
+           
+
+        </div>
+      
+    </div>
+   
+    <img src="/assest/cancel.png" alt="Close" id="cancel" class="close-icon">
+</div>
+
+        
+
+       <img src="/assest/logout.png" alt="logout" id="logoutlogo"><h6 id="logoutp">logout</h6>
+       <div id="logoutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Are you sure you want to log out &#10060;</p>
+            <button id="yesLogout">Yes</button>
+            <button id="noLogout">No</button>
+        </div>
+    </div>
+       </div>
+   </div>
+
+   <div id="separator-line"></div>
+   <script src="emp.js"></script>
+   <script src="cart.js"></script>
+   
+   <script>
+       
+
+
+   </script>
+</body>
+</html>

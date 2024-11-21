@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+    
+        font-family: "Faculty Glyphic", serif;
+       
+        font-style: normal;
+      
+      
+}
+.cart {
+    position: fixed;
+    font-family: "Faculty Glyphic", serif;
+    top: 0;
+    right: -100%; /* Initially hidden */
+    width: 400px;
+    height: 100vh; /* Fit the viewport height */
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    background-color: rgba(112, 98, 81, 0.281);
+    box-shadow: 1px 4px rgba(169, 169, 255, 0.1);
+    z-index: 100;
+    transition: right 0.5s ease; /* Smooth transition */
+}
+
+/* Active class to show the cart panel */
+.cart-active {
+    right: 0; /* Slide in the cart */
+    margin-top: 6rem; /* Adjust as needed */
+    height: 100vh; /* Ensure the height fits the viewport */
+}
+
+#empPanel1 {
+     position: fixed;
+    display: none; /* Hidden by default */
+ 
+  
+    right: 10;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(6, 136, 82, 0.822);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: 0.5 ease;
+}
+
+#empPanel1 h1{
+     color: chocolate;
+     font-size: bold ;
+     font-family: cursive, 'Times New Roman', Times, sans-serif;
+}
+
+.form-container{
+    margin-bottom: 1rem;
+}
+
+
+/* Styling for the Options in the Panel */
+.panel-box {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f0f0f0b6;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.panel-box:hover {
+    background-color: #e0e0e0;
+}
+
+/* Close Icon Style */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+    /* Das Close Icon */
+ .das-close-icon{
+         position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    
+    }
+#empLogo{
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    left: 90%;
+    top: 7%;
+}
+#daslogo {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    left: 93%;
+    top: 7%;
+    
+    z-index: 1000;
+}
+#logoutlogo{
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    left: 96%;
+    top: 7%;
+}
+#logoutp{
+    margin: -4.5rem -5rem 0rem 153.5%;
+}
+#emp-3d{
+    height: 50px;
+    width: 250px;
+    padding: 1rem 0rem 2rem 0rem;
+}
+
+
+/*------------------------------*/
+/* Form Container Styling */
+.form-container {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #dbd1d1;
+    border-radius: 8px;
+    background-color: #c45b2aaf;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.form-container input{
+    background-color: #0dbe658a;
+}
+.form-container h3{
+    color: brown;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button#submitForm {
+    width: 40%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#submitForm:hover {
+    background-color: #0056b3;
+}
+
+/* -----------------------DashBoard */
+.cart-content1 {
+    display: flex;
+    width: 100%;
+}
+
+#empPanel1 #seperate-line{
+    border: 1px solid rgb(207, 188, 152);
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.sidebar1 {
+    width: 15%;
+    /* background-color: #f0f0f0; */
+    padding: 19px;
+    margin: 5rem 0rem 2rem 2rem;
+}
+
+.panel-box1 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #b49b28;
+    border-radius: 5px;
+    text-align: center;
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+.panel-box1:hover {
+    background-color: #e9a30e;
+}
+
+.main-content1 {
+    width: 80%;
+    padding: 20px;
+}
+
+.details-table {
+    margin-top: 5rem;
+    display: none;
+    color: rgb(0, 0, 0);
+  
+
+}
+.details-table h3{
+    margin-right: 35%;
+}
+
+.details-table table {
+    width: 90%;
+    border-collapse: collapse;
+    color: rgb(47, 53, 47);
+    margin-left: 5rem;
+}
+
+.details-table th, .details-table td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+    color: #000000;
+}
+
+.details-table th {
+    background-color: #c47c7c;
+    color: rgb(0, 0, 0);
+}
+
+
+
+/* EDIT BUTon */
+
+.edit-btn{
+    background-color: #2696a5;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin: 1rem 1rem 1rem 1rem;
+    color: #ccc;
+    cursor: pointer;
+    border: 1px solid rgb(24, 170, 180);
+}
+.delete-btn{
+    background-color: #c26d3c;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin: 1rem 1rem 1rem 1rem;
+    color: #ccc;
+    cursor: pointer;
+    border: 1px solid rgb(24, 170, 180);
+}
+
+
+
+/* Logout Cart  */
+/* Modal Styles */
+.modal {
+   margin: 4rem -1rem 20rem 40rem;
+    width: 400px;
+    height: 100px;
+    background-color: rgb(36, 144, 177);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgb(212, 143, 78);
+    padding: 20px;
+    margin-top: 3rem;
+    border-radius: 25px;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #40b609;
+    border-radius: 10px;
+}
+
+
+/* Update sucessfull Message in HTMl */
+/* .notification{
+    margin: 35% 8rem -1rem 0rem;
+} */

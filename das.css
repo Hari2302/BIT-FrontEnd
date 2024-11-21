@@ -1,0 +1,41 @@
+/*   Update Form */
+
+#update-form{
+    text-transform: uppercase;
+   margin: 5rem 3rem 0rem 0rem;
+   background-color: rgba(83, 74, 34, 0.007);
+   height: 700px;
+   width: 500px;
+ 
+}
+#update-form h3{
+    padding: 2rem;
+}
+#update-form div{
+    padding: 10px;
+    /* border: 1px solid rgba(255, 255, 0, 0.075); */
+}
+#update-form input{
+    padding: 6px;
+    border-radius: 5px;
+    background-color: rgba(43, 189, 226, 0.452);
+    width: 300px;
+}
+#update-form label{
+    /* background-color: rgba(127, 255, 212, 0.445); */
+    padding: 1px;
+    border-radius: 2px;
+}
+#update-form #up-btn{
+    background-color: rgb(25, 145, 35);
+}
+#update-form #can-btn{
+    background-color: rgb(145, 37, 37)
+    ;
+}
+#can-btn:hover{
+    background-color: cyan;
+}
+#update-form input:hover{
+    background-color: rgba(155, 100, 33, 0.479);
+}

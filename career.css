@@ -1,0 +1,266 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Faculty Glyphic", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  }
+  
+  body {
+    /* background-color: #f0f2f5; */
+    /* background-image: url("/assest/hirig.png"); */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-color: #25607c;
+}
+  
+  /* Header Section */
+  .hero {
+    background: url('https://source.unsplash.com/1600x900/?office,teamwork') center/cover;
+  
+    height: 25vh;
+    /* color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: wheat;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero button {
+    padding: 10px 20px;
+    background: #15a7eb;
+    border: none;
+    /* color: #fff; */
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .hero button:hover {
+    background: #15a7eb;
+  }
+  
+  /* Job Listings */
+  .job-listings {
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .job-listings h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #f1e8f1;
+  }
+  
+  .jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .job-card {
+    background: #d6c2c2;
+    border: 1px solid #ce9898;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(138, 131, 131, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .job-card h3 {
+    font-size: 1.5rem;
+    color: #ce8517;
+  }
+  
+  .job-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .job-card button {
+    padding: 10px 15px;
+    background: #07ac59;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .job-card button:hover {
+    background: #15a7eb;
+  }
+  
+  /* Modal Form */
+  .apply-form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .apply-form-content {
+    background: #3ca56b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    height: 500PX;
+  }
+  .apply-form-content ,h2,#job-title{
+    color: rgb(56, 5, 63);
+  }
+  
+  .apply-form-content input,
+  .apply-form-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  #applicationForm  #name,#email,#resume,#message{
+    color: rgb(231, 117, 117);
+  }
+  
+  .apply-form-content button {
+    width: 100%;
+    padding: 10px;
+    background: #25607c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-form-content button:hover {
+    background: #06374e;
+  }
+  
+  .close-btn {
+    background: #626d72;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .job-card {
+      width: 100%;
+    }
+  }
+  
+
+  /* Footer styles */
+footer {
+  background-color: #d6e045;
+  color: rgb(7, 3, 3); /* Text color */
+  text-align: center; /* Center align the text */
+  padding: 3px 0; /* Padding around the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .footer-content h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Applicatuion Form */
+
+#applicationDetails {
+  margin-top: 5rem;
+  display: none;
+  color: rgb(245, 240, 240);
+
+
+}
+#applicationDetails h3{
+  margin-right: 35%;
+}
+
+#applicationDetails table {
+  width: 70%;
+  border-collapse: collapse;
+  color: rgb(47, 53, 47);
+  margin-left: 5rem;
+}
+
+#applicationDetails th, #applicationDetails td {
+  padding: 10px;
+  border: 1px solid #000000;
+  text-align: left;
+  color: #ffffff;
+}
+
+#applicationDetails th {
+  background-color: #c47c7c;
+  color: rgb(116, 4, 4);
+}
+
+
+/* Application   Statis input Field */
+.status-email{
+  margin-left: 2rem;
+}
+.status-email input{
+ padding: 2px;
+ border-radius: 5px;
+}
+#status-btn{
+  background: none;
+  border: none;
+  margin-left: -1.5rem;
+  font-size: 18px;
+  border-radius: 20px;
+ 
+}
+#applicationDetails{
+  margin-bottom: 15rem;
+}
+
+
+/* Successfull message */
+#responseMessage{
+  
+   margin-left: 3rem;
+   border-radius: 20px;
+   color: #0d2217;
+}
