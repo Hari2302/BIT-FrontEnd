@@ -5,7 +5,7 @@ const empLogo = document.querySelector('#empLogo');
 
 const dasLogo = document.getElementById('daslogo');
 
-const empPanel1 = document.getElementById('empPanel1');
+const empPanel1= document.getElementById('empPanel1');
 const empPanel = document.querySelector('#empPanel');
 const btnClose = document.querySelector('#cancel');
 const internOption = document.querySelector('#intern');
@@ -65,10 +65,11 @@ dasLogo.addEventListener('click', () => {
 //         document.getElementById('update-form').style.display="none";
 // });
 
-const closeBtn = document.querySelector('#empPanel1 .close-icon');
+const closeBtn = document.querySelector('#empPanel1 .close-icon ');
 if (closeBtn) {
     closeBtn.addEventListener('click', () => {
         empPanel1.style.display = 'none';
+
         window.location.reload();
     });
 }

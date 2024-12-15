@@ -69,7 +69,7 @@ const jobData = [
         const result = await response.json();
         responseMessage.style.display = "block";
         responseMessage.style.color = "green";
-        responseMessage.textContent = "Application submitted successfully.........!";
+        responseMessage.textContent = "Application submitted successfully!";
       } else {
         const errorResult = await response.json();
         responseMessage.style.display = "block";
@@ -129,78 +129,94 @@ const jobData = [
     });
   
 });
-
 // Function to display fetched application details
+// Function to display application details in a form-style layout
 function displayApplicationData(data) {
-    const applicationData = document.getElementById("applicationData");
-    const applicationDetails = document.getElementById("applicationDetails");
-    applicationDetails.style.display = "block";
-    applicationData.innerHTML = '';
+  const applicationDetails = document.getElementById("applicationDetails");
+  const applicationContainer = document.getElementById("applicationData");
 
-    // Assuming `data` is an array of application details
-    data.forEach(app => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${app.name}</td>
-            <td>${app.email}</td>
-            <td><a href="${apiUrl}/downloadResume/${app.id}" target="_blank">View Resume</a></td>
-            <td>${app.message}</td>
-            <td>${app.status }</td><td>
-          <button class="delete-btn" onclick="deleteApplications('${app.email}')">Delete</button>
-             </td>
-        `;
-        applicationData.appendChild(row);
-    });
+  applicationDetails.style.display = "block"; // Show the details container
+  applicationContainer.innerHTML = ''; // Clear any previous data
+
+  // Loop through each application and create a "form card"
+  data.forEach(app => {
+    const card = document.createElement("div");
+    card.className = "application-card"; // CSS class for styling
+
+    card.innerHTML = `
+      <div class="application-field">
+        <label ><strong>Name:</strong></label>
+        <span >${app.name}</span>
+      </div>
+      <div class="application-field">
+        <label><strong>Email:</strong></label>
+        <span>${app.email}</span>
+      </div>
+      <div class="application-field">
+        <label><strong>Resume:</strong></label>
+        <a href="http://localhost:5218/api/auth/downloadResume/${app.id}" target="_blank">View Resume</a>
+      </div>
+      <div class="application-field">
+        <label><strong>Message:</strong></label>
+        <span>${app.message}</span>
+      </div>
+      <div class="application-field">
+        <label><strong>Status:</strong></label>
+        <span>${app.status}</span>
+      </div>
+      <button class="delete-btn" onclick="deleteApplications('${app.email}')">Delete</button>
+    `;
+    
+    applicationContainer.appendChild(card);
+  });
 }
 
 // Function to fetch application details from the API
 async function fetchApplicationDetails(email) {
-    const apiUrl = "http://localhost:5218/api/auth/Application"; // Replace with your actual API URL
+  const apiUrl = "http://localhost:5218/api/auth/Application"; // Replace with your actual API URL
 
-    try {
-        const response = await fetch(apiUrl);
-        const applications = await response.json();
+  try {
+      const response = await fetch(apiUrl);
+      const applications = await response.json();
 
-        // Filter applications by email
-        return applications.filter(app => app.email.toLowerCase() === email.toLowerCase());
-    } catch (error) {
-        console.error("Error fetching application details:", error);
-        return [];
-    }
+      // Filter applications by email
+      return applications.filter(app => app.email.toLowerCase() === email.toLowerCase());
+  } catch (error) {
+      console.error("Error fetching application details:", error);
+      return [];
+  }
 }
-
 
 // Function to delete an application by email
 async function deleteApplications(email) {
-    const apiUrl = `http://localhost:5218/api/auth/Applications/${email}`; // Replace with your actual API URL
+  const apiUrl = `http://localhost:5218/api/auth/Applications/${email}`; // Replace with your actual API URL
 
-    const confirmation = confirm(`Are you sure you want to delete the application?`);
-    if (confirmation) {
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'DELETE',
-            });
-              document.getElementById('applicationDetails').style.display="none";
-            if (response.ok) {
-                document.getElementById('responseMessage').style.display = "block";
-                document.getElementById('responseMessage').style.color = "red";
-                document.getElementById('responseMessage').textContent = "Application Deleted successfully.....! ";
+  const confirmation = confirm(`Are you sure you want to delete the application?`);
+  if (confirmation) {
+      try {
+          const response = await fetch(apiUrl, {
+              method: 'DELETE',
+          });
+
+          if (response.ok) {
+              const responseMessage = document.getElementById('responseMessage');
+              responseMessage.style.display = "block";
+              responseMessage.style.color = "red";
+              responseMessage.textContent = "Application Deleted successfully!";
+
+              // Refresh the application list after deletion
+              fetchApplication(); // Function to reload the list
               
-                // Optionally, refresh the application list on the webpage
-                fetchApplication(); // Refresh the list after deletion
-             // Reloads the current page
+          } else {
+              alert("Failed to delete application. Please try again.");
+          }
+      } catch (error) {
+          console.error("Error deleting application:", error);
+      }
 
-                
-            } else {
-                alert("Failed to delete application. Please try again.");
-            }
-        } catch (error) {
-            console.error("Error deleting application:", error);
-        }
-    }
       // Hide the message after 2 seconds
-            setTimeout(() => {
-                document.getElementById('responseMessage').style.display = "none";
-            }, 2000); // 2000ms = 2 seconds
+      setTimeout(() => {
+          document.getElementById('responseMessage').style.display = "none";
+      }, 2000); // 2000ms = 2 seconds
+  }
 }
- 

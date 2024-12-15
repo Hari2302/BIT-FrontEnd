@@ -1,0 +1,114 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for video and content */
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  /* Background Video */
+  .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the screen without distortion */
+    z-index: -1; /* Puts the video behind the content */
+  }
+  
+  /* Content Overlay */
+  .content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+  }
+  
+  /* Title and Description */
+  .content h1 {
+    font-size: 3rem;
+    margin: 2rem;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin: 1rem 0rem 2rem 0rem;
+  }
+  
+  /* Login Page */
+.login-page {
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent form background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.login-page:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+    transform: scale(1.05); /* Slightly enlarge the form */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+}
+
+  /* Form Inputs */
+  .form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Form Buttons */
+  .form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+  .form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form Links */
+  .message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .message a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .message a:hover {
+    text-decoration: underline;
+  }

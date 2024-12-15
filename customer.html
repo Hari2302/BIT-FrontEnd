@@ -172,7 +172,7 @@
                                     <i class="fa fa-arrow-right"></i>
                                 </span>   
                             </div>
-                           </div>
+                           </div> 
                            <div class="m6col3">
                             <div class="m6down">
                                 <button id="m6rabtn">Predictive Analysis</button>
@@ -338,6 +338,16 @@
     </footer>
 
     <script src="script.js"></script>
+    
+<script>
+    // JavaScript to toggle the navigation links on mobile
+    const toggle = document.getElementById('toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
 </body>
 
 </html>

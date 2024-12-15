@@ -5,13 +5,17 @@
   <title>Soft</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="chatbot.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="slide.css">
 <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation bar with title -->
+
   <div id="navbar">
-    <img src="/assest/logo-B1.png" alt="" class="b-logo">
+    <img src="/assest/B-Logo (2).png"  class="b-logo">
     <h1 id="title">IT</h1>
     
     <!-- Navigation links for Product, Customer, Company -->
@@ -19,19 +23,98 @@
       <a href="product.html" id="product">Product</a>
       <a href="customer.html" id="customer">Customer</a>
       <a href="company.html" id="company">Company</a>
-      <a href="login.html" id="career">Careers</a>
+      <a href="/login.html" id="career">Careers</a>
     </div>
     
     <!-- Login button on the right side -->
     <div id="login-btn">
-      <img src="/assest/user-login.png"  class="finger" id="finger" href="login.html" style="display: block;">
+      
       <!-- Link to trigger the login popup -->
-      <a href="login.html" id="login">Login</a>
+      
     </div>
+    <a href="/login.html" id="login1" class="login1" style="display: block;"> Login</a>  <button id="close-login" style="display: none; cursor: pointer;">Close</button>
     <div id="responseMessage" style="display: none; color: #0c3b1a; font-weight: bold;">	</div>
   </div>
+ 
+  <div id="login-success-message" style="display: none; color: green; font-weight: bold; text-align: center; margin-top: 20px;">
+    Login successful..!
+  </div>
+</div>
 
   <div id="separator-line"></div>
+
+   <div class="Main2">
+
+
+    <div class="Main2-Left">  <h1 class="hero">WE ARE HERO'S OF</h1>
+      <img src="./assest/main2b.png" alt="" class="deimg">
+  
+        <div class="lettalk">LET'S TALK</div>
+
+      </div>
+
+    <div class="Main2-Right">
+      
+   
+
+      
+      
+      <img src="/assest/main-man.png" alt="" class="mainmanimg"> <img src="/assest/lap-man.png" alt=""></div>
+  
+      
+   </div>
+ 
+
+
+    <!-- /MAIn 3--------- -->
+
+    <div class="Main3">
+      <div class="Main3-Left">
+        <img src="/assest/Main3Img.png" class="Main3Img">
+      </div>
+      <div class="Main3-Right ">
+        
+<h2 style="text-align:center;" class="main3slidecontent" style="color: ye;" >Our Software Company Vision</h2>
+
+<div class="slideshow-container">
+
+  <div class="slides fade">
+    <div class="numbertext">1 / 3</div>
+    <div class="text">"Collaboration is the core principle that lies at the heart of our success. By fostering a culture of teamwork and open communication, we harness the diverse strengths and perspectives of each individual. Together, we achieve more than we ever could alone, leveraging our collective expertise to tackle challenges, innovate solutions, and drive meaningful results. This spirit of partnership not only enhances our productivity but also cultivates a sense of belonging and shared purpose, empowering us to reach new heights in our endeavors."</div>
+  </div>
+
+  <div class="slides fade">
+    <div class="numbertext">2 / 3</div>
+    <div class="text" style="color: blueviolet;">"Innovation is the powerful force that drives us forward, continually transforming creative ideas into impactful solutions that not only address current challenges but also pave the way for a brighter and more sustainable future. Through collaboration, imagination, and a commitment to excellence, we harness the potential of innovation to inspire change and improve lives across diverse communities."</div>
+  </div>
+
+  <div class="slides fade">
+    <div class="numbertext">3 / 3</div>
+    <div class="text" style="color: rgb(128, 61, 23);">""Growth is our unwavering and constant goal, serving as the foundation for everything we do. We are dedicated to fostering growth not only for our clients, empowering them to achieve their objectives and realize their full potential, but also for our team, nurturing their skills and careers to create a dynamic and motivated workforce. Additionally, we prioritize the continuous advancement of our technology, ensuring that we remain at the forefront of innovation and can provide cutting-edge solutions that drive success in an ever-evolving landscape."</div>
+  </div>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+      </div>
+    </div>
+    
+
+    <!-- MAIN 4------- -->
+
+
+    <div class="Main4">
+      
+      <div class="Main4-Left"></div>
+    <div class="Main4-Right" ></div>
+  
+  </div>
+
+  
   <!-- Footer Section -->
 <footer>
     <img class="footlogo" src="/assest/footerlogo-removebg-preview.png" alt="">
@@ -43,7 +126,10 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="/script.js" defer></script>
-  <script src="/career.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="career.js" defer></script>
+  <script src="chatbot.js"></script>
+  <script src="slide.js"></script>
+    
 </body>
 </html>

@@ -1,152 +1,147 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-  background-image: url("/assest/BACKPOINT.avif");
-  background-repeat: no-repeat;
-  background-size: cover; /* Ensures the image covers the full screen */
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
+  /* background-image: url("/assest/BACKPOINT.avif"); */
+
+
+  
   font-family: "Faculty Glyphic", serif;
   font-weight: 400;
   font-style: normal;
 
+  padding: auto;
+  box-sizing: border-box;
+  
+
 }
 /*-----------------------------------------------------------------*/
 /* Style for navigation bar */
+
+/* Navbar styles */
 #navbar {
   display: flex;
- 
- 
-  color: #032a41;
+  color: #d9e2e7;
+  background-color: #0e2d33;
+  justify-content: space-between; /* Adjust navbar items */
+  align-items: center; /* Center items vertically */
+  padding: 1rem 2rem;
 }
 
 #title {
- margin: 1.9rem 0rem 0rem -0.9rem;
+ margin-left: -4rem;
   font-size: 49px;
   cursor: pointer;
 }
-.b-logo{
 
-  height:120px ;
+.b-logo {
+  height: 120px;
   top: -0.5px;
   left: 20px;
-
+  /* position: fixed; */
 }
 
 #nav-links {
   display: flex;
   gap: 15px;
-  margin: 2.5rem 1rem 0rem 9rem;
-  padding: 1rem;
-
+  margin: 0;
 }
 
 #nav-links a {
-  color: #dce0e4;
+  color: #dbe1e7;
   text-decoration: none;
   font-size: 20px;
   margin-left: 1rem;
   margin-top: 1rem;
-
 }
 
+/* Login button styling */
+#login-btn {
+  margin-top: 2rem;
+}
 
-.finger{
-  position: fixed;
-  height: 50px;
-  width:50px;
-  right: 9rem;
-  top: 4rem;
+#login1 {
+  margin: 4% 2% 0% 51%;
+  color: wheat;
+  cursor: pointer;
 }
 
 #login-btn a {
-  color: #032a41;
+  color: #e8eaeb;
   text-decoration: none;
   font-size: 15px;
-
   padding: 4px;
-  margin: 2.4rem 0rem 0rem 72.5rem;
+  margin-left: auto;
   border-color: #032a41;
   border-radius: 3px;
-  
-}#login-btn {
-  margin-top: 2rem;
 }
-#login{
-  position: fixed;
-  
-  /* background-color: #58c2ff; */
-  border-radius: 20px;
-  padding: 5px;
-  top: 50px;
-  cursor: pointer;
-  left: 31.5%;
-  color: rgb(230, 255, 255);
-    
-  }
-  #login:hover{
-    /* background-color: #032163; */
-    color: #000000;
-  }
 
-/* Hover effect for navigation links */
-#nav-links a:hover{
-  color: #05081a;
-  
+#login:hover {
+  color: #ebe1e1;
 }
+
+#nav-links a:hover {
+  color: #dad5d5;
+}
+
 #login-btn a:hover {
-
-  /* background-color: #4aa3b9; */
-  color: #000000;
+  color: #eceaea;
 }
-
-
 
 /* Full-width line below the navbar */
 #separator-line {
   width: 100%;
-  height: 1.2px; /* Line thickness */
-  background-color: #5d878f; /* Line color (you can change this) */
- 
+  height: 1.2px;
+  background-color: #5d878f;
 }
 
-.footlogo{
+.footlogo {
   height: 50px;
   width: 50px;
   margin-right: 15%;
   margin-bottom: -3rem;
 }
-/*-----------------------------------------------------------------*/
 
+/* Login Page */
 .login-page {
   width: 360px;
   padding: 8% 0 0;
-  margin: -9% 0% 0% 74%  ;
+  margin: -7% 0% 0% 80%;
 
+  position: fixed;
+  display: contents;
 }
+
 .form {
   position: relative;
   z-index: 1;
- background-color: #032a4196;
+  background-color: #0f0f0f;
   max-width: 360px;
-  margin: 0 auto 100px ;
+  margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(156, 228, 224, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #79b4b162;
   width: 100%;
   border: 0;
-  color: #000000;
+  color: #e6dfdf;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
 }
+
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -155,42 +150,49 @@ body{
   width: 100%;
   border: 0;
   padding: 15px;
-  color: #06191d;
+  color: #edf1f1;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+
+.form button:hover,
+.form button:active,
+.form button:focus {
   background: #43A047;
 }
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
+
 .form .message a {
   color: #186b1a;
   text-decoration: none;
 }
-.form .register-form {
-  display: none;
-}
+
 .container {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
 }
-.container:before, .container:after {
+
+.container:before,
+.container:after {
   content: "";
   display: block;
   clear: both;
 }
+
 .container .info {
   margin: 50px auto;
   text-align: center;
 }
+
 .container .info h1 {
   margin: 0 0 15px;
   padding: 0;
@@ -198,18 +200,68 @@ body{
   font-weight: 300;
   color: #1a1a1a;
 }
+
 .container .info span {
   color: #4d4d4d;
   font-size: 12px;
 }
+
 .container .info span a {
   color: #000000;
   text-decoration: none;
 }
+
 .container .info span .fa {
   color: #EF3B3A;
 }
 
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  /* Navbar layout */
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  #title {
+    font-size: 36px;
+    margin: 1rem 0;
+  }
+
+  .b-logo {
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  #nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
+  }
+
+  #nav-links a {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  #login-btn {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  #login1 {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+
+
+
+}
 /* Footer styles */
 footer {
    background-color: #3c83ac;
@@ -230,4 +282,283 @@ footer .footer-content h2 {
 footer p {
   margin: 10px 0;
   font-size: 14px;
+}
+
+/* ---------------------------------------------MAIN 2 */
+.Main2 {
+  background-color: #0e2d33;
+  display: flex;
+  flex-direction: column;
+  background-image: url('assest/main2-back.jpg');
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.hero {
+  margin: 5% 0% 0% 10%;
+  color: #a691f5;
+  font-size: 3rem;
+}
+
+.deimg {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin-left: 7rem;
+}
+
+.lettalk {
+  padding: 9px 3px 9px 9px;
+  border: 2px solid white;
+  width: 130px;
+  margin: -3rem 0 0 15rem;
+  background-color: #a691f5;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.Main2-Right {
+  margin: -25rem 2rem 2rem 60%;
+  position: relative;
+}
+
+.chatbot {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 10%;
+  left: 90%;
+  cursor: pointer;
+}
+
+.mainmanimg,
+.lap-man img {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem 0;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .Main2 {
+    flex-direction: column;
+    align-items: center;
+    background-image: url('assest/main2-back-small.jpg'); /* Optional: different background for smaller screens */
+  }
+
+  .hero {
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .deimg {
+    margin-top: 1rem;
+    width: 80%; /* Adjust image size on smaller screens */
+    max-width: 400px;
+    margin-left: 1rem;
+  }
+
+  .lettalk {
+    margin: 1rem 0;
+    width: 120px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .Main2-Right {
+    margin: 0;
+    text-align: center;
+  }
+
+  .chatbot {
+    top: auto;
+    left: auto;
+    position: relative;
+    margin-top: 2rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .mainmanimg,
+  .lap-man img {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+  .hero {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .lettalk {
+    width: 100px;
+    font-size: 0.9rem;
+    margin: 1rem auto;
+  }
+
+  .chatbot {
+    width: 35px;
+    height: 35px;
+  }
+
+  .mainmanimg,
+  .lap-man img {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+/* ---------------MAIN 3 -----------------*/
+.Main3 {
+  background-color: #0e240f5d;
+  width: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-image: url('./assest/pexels-mikhail-nilov-7442125.jpg');
+}
+
+.Main3-Left {
+  width: 300px;
+}
+
+.Main3-Right {
+  width: 700px;
+}
+
+.Main3Img {
+  height: 500px;
+  width: 500px;
+  margin: 40px;
+  padding: 20px;
+}
+
+.main3slidecontent {
+  margin-top: 7rem;
+  font-size: 40px;
+  color: rgb(173, 22, 11);
+}
+
+.slideshow-container .slides {
+  margin-top: 3rem;
+  font-size: 20px; /* Reduced font size for better readability */
+}
+
+.dot-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 1130px) {
+  .Main3 {
+    display: block; /* Stack the left and right sections */
+    text-align: center; /* Center-align for smaller screens */
+  }
+
+  .Main3-Left, .Main3-Right {
+    width: 100%; /* Full width for mobile devices */
+  }
+
+  .Main3Img {
+    height: auto;
+    width: 80%; /* Adjust size to fit smaller screens */
+    margin: auto;
+  }
+
+  .main3slidecontent {
+    font-size: 30px; /* Reduce font size */
+    margin-top: 2rem;
+  }
+
+  .slideshow-container .slides {
+    font-size: 16px; /* Smaller text for slides on mobile */
+    margin-top: 2rem;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+
+/* MAin 4---------------- */
+
+
+.Main4 {
+  height: 700px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-image: url('assest/abstract-1264071_1280.png');
+  background-size: cover;
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: 100% 100%;
+}
+
+.Main4-Left,
+.Main4-Right {
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;
+  height: 400px;
+  width: 700px;
+  margin: 4rem 0rem 0rem 4rem;
+  border-radius: 20px;
+}
+
+.Main4-Left {
+  background-image: url('assest/main4map.png');
+}
+
+.Main4-Right {
+  background-image: url('assest/addressb.png');
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 1130px) {
+  .Main4 {
+    display: block; /* Stack the sections vertically */
+  }
+
+  .Main4-Left,
+  .Main4-Right {
+    width: 100%; /* Full width on small screens */
+    height: 300px; /* Adjust height */
+    margin: 2rem auto; /* Center and reduce margin */
+  }
+
+  .Main4-Left {
+    background-position: center; /* Adjust background image positioning */
+  }
+
+  .Main4-Right {
+    background-position: center; /* Adjust background image positioning */
+  }
+}
+
+@media (max-width: 768px) {
+  .Main4 {
+    height: auto; /* Allow sections to adjust based on content */
+  }
+
+  .Main4-Left,
+  .Main4-Right {
+    height: 250px; /* Reduce height further on very small screens */
+    width: 90%; /* Slightly reduce the width for smaller devices */
+  }
 }

@@ -4,12 +4,13 @@ body {
     margin: 0;
     padding: 0;
     color: #2c3e50;
-    background-image: url("https://t4.ftcdn.net/jpg/10/03/66/03/240_F_1003660395_TYiiiahjSBS4Dj4YPd5EGxCFvbPlUWg8.jpg");
+    /* background-image: url("https://t4.ftcdn.net/jpg/10/03/66/03/240_F_1003660395_TYiiiahjSBS4Dj4YPd5EGxCFvbPlUWg8.jpg"); */
     background-repeat: no-repeat;
     background-size: cOVER;
     font-family: "Faculty Glyphic", serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #be971749;
   
 }
 
@@ -24,6 +25,7 @@ body {
 .event-info-bit h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    color: brown;
 }
 
 .event-info-bit p {
@@ -70,6 +72,7 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .event-card-bit {
@@ -80,11 +83,15 @@ body {
     width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.events-grid  :hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #0747321c;
+}
 
 .event-card-bit h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #052215;
+    color: #f50a3d;
 }
 
 .event-card-bit p {
@@ -97,10 +104,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: rgb(119, 9, 122);
 }
 
 .details-link-bit {
-    color: #052215;
+    color: #074732;
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px;
